@@ -1,0 +1,69 @@
+/**
+ * Single source of truth. Company fields hold {{...}} values until the final step (STOP 2); every page reads them from here.
+ * Domain: hostavale.com (working name, can change at STOP 1).
+ */
+const domain = "hostavale.com";
+
+export const siteConfig = {
+  name: "Hostavale",
+  domain,
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://hostavale.com",
+  tagline: "Web hosting that is set up for you.",
+  description:
+    "Hostavale sets up your web hosting for you: shared, WordPress, VPS or cloud hosting, paid once for 12 months. We install it and email your access details.",
+  launchMonth: "November 2026",
+
+  // Company identity (final step fills these in)
+  legalEntity: "{{LEGAL NAME}}",
+  legalForm: "{{LEGAL FORM}}",
+  registrationNumber: "{{REGISTRATION NUMBER}}",
+  address: "{{ADDRESS}}",
+  governingLaw: "{{GOVERNING LAW}}",
+  /** The exact legal notice the owner gives at STOP 2. Empty = built from the fields above. */
+  legalNoticeOverride: "",
+
+  contactEmail: `contact@${domain || "{{DOMAIN}}"}`,
+  phone: "{{PHONE}}",
+  hours: "Monday to Friday, 9:00 to 17:00 (time zone of our registered office)",
+  hoursNote: "Messages sent outside these hours are answered on the next business day.",
+
+  // Service promises, reused by every page so they stay identical (the owner must staff them: see docs/OWNER-TODO.md)
+  refundWindowDays: 14,
+  refundDecisionDays: 3,
+  refundPayDays: 10,
+  startWithinDays: 2,
+  replyDays: 3,
+  termMonths: 12,
+
+  social: {
+    x: "https://x.com/hostavale",
+    instagram: "https://instagram.com/hostavale",
+    linkedin: "https://linkedin.com/company/hostavale",
+    facebook: "https://facebook.com/hostavale",
+  } as Record<string, string>,
+  /** Only networks that really exist are shown. Hidden until the owner confirms them. */
+  socialLive: { x: false, instagram: false, linkedin: false, facebook: false } as Record<string, boolean>,
+
+  /** One-time Airwallex payment links, one per offer. Env vars override. Empty = disabled "Checkout opens soon" button. */
+  payLinks: {
+    shared: process.env.NEXT_PUBLIC_PAY_SHARED || "",
+    wordpress: process.env.NEXT_PUBLIC_PAY_WORDPRESS || "",
+    vps: process.env.NEXT_PUBLIC_PAY_VPS || "",
+    cloud: process.env.NEXT_PUBLIC_PAY_CLOUD || "",
+  } as Record<string, string>,
+
+  /** Only what the site really uses. The hosting provider that runs the servers is added by the owner at STOP 2. */
+  subProcessors: [
+    { name: "Cloudflare, Inc.", purpose: "Hosting, content delivery, security and the database that stores the forms you send us", location: "United States and worldwide edge network", safeguard: "EU-US Data Privacy Framework and Standard Contractual Clauses" },
+    { name: "Airwallex (UK) Limited and affiliates", purpose: "Card payment processing for the plans you buy", location: "United Kingdom, EEA, Hong Kong and Singapore", safeguard: "UK adequacy decisions and Standard Contractual Clauses" },
+    { name: "{{HOSTING PROVIDER}}", purpose: "The company whose servers run the hosting you buy; it receives your domain name and contact email so that the hosting account can be created", location: "{{PROVIDER LOCATION}}", safeguard: "{{PROVIDER SAFEGUARD}}" },
+  ],
+};
+
+/** Shown verbatim on Pricing and in the Terms. */
+export const mandatoryText = "Each plan is hosting that we set up for you for 12 months, paid once. Domain names, email sending services and website design are not included, and we do not publish an uptime guarantee.";
+
+export function legalNotice(): string {
+  if (siteConfig.legalNoticeOverride) return siteConfig.legalNoticeOverride;
+  return `${siteConfig.name} is operated by ${siteConfig.legalEntity}, registration no. ${siteConfig.registrationNumber}, registered office: ${siteConfig.address}.`;
+}
