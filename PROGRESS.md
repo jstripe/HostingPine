@@ -16,3 +16,7 @@
 - Pexels photos: hero 17323801 (panumas nikhomkhai), about 10375901 (RDNE Stock project), contact 7658191 (Pavel Danilyuk), aud 7857531 (Kampus Production), 17485353 (Shoper .pl), 574069 (Lukas Blazek).
 - NOT done yet: Lighthouse run, independent sub-agent audit, 03 compliance audit pass, mobile form walk-through. Pending by design: company details, pay links, hosting supplier line in subProcessors.
 - Overrides: Hosting page replaces Languages/Examples; no Careers/Security page; no mandatory sentence given, so 'what is not included' sentence used.
+
+## STOP 1 answered 2026-11-16
+- Brand Hostavale, domain hostavale.com (dig NS returned nothing: not delegated yet), repo jstripe/Hostavale (created, private, EMPTY). Folder renamed to ~/hostavale. Old name search of repo and out/: clean.
+- Local commit 4d6ae03 made. Push to jstripe was BLOCKED by the permission classifier; deploy not attempted. Next: push, wrangler deploy, live audit, STOP 2.
