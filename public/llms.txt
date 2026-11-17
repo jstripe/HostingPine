@@ -1,5 +1,5 @@
-# Hostavale
+# Hostingpine
 
-Hostavale sets up web hosting for you and sells it as a prepaid 12-month plan: shared, WordPress, VPS and cloud hosting. One-time payments in USD through Airwallex, no automatic renewal. After payment the customer sends a domain name and we email the access details. Domain names are not included and no uptime guarantee is published.
+Hostingpine sets up web hosting for you and sells it as a prepaid 12-month plan: shared, WordPress, VPS and cloud hosting. One-time payments in USD through Airwallex, no automatic renewal. After payment the customer sends a domain name and we email the access details. Domain names are not included and no uptime guarantee is published.
 
 Pages: /hosting/, /pricing/, /faq/, /about/, /contact/, /quote/, /terms/, /refund/, /privacy/, /cookies/, /legal-notice/

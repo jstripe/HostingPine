@@ -19,7 +19,7 @@ export function BuiltFor() {
 export function Benefits() {
   return (
     <Section>
-      <SectionHeading eyebrow="Why Hostavale" title="Hosting without the set-up work" sub="You choose a plan and send us your domain. We do the installation, and we tell you plainly what each plan includes and what it does not." />
+      <SectionHeading eyebrow="Why Hostingpine" title="Hosting without the set-up work" sub="You choose a plan and send us your domain. We do the installation, and we tell you plainly what each plan includes and what it does not." />
       <div className="grid gap-5 md:grid-cols-3">
         {benefits.map((b) => (
           <div key={b.title} className="surface surface-hover p-7">

@@ -20,7 +20,7 @@ import { faqLd, serviceLd } from "@/lib/seo";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata(
-  "Hostavale: web hosting that is set up for you",
+  "Hostingpine: web hosting that is set up for you",
   "Shared, WordPress, VPS and cloud hosting, set up for you and paid once for 12 months. We install it and email your access details. Plans from $79, no automatic renewal.",
   "/",
 );

@@ -11,7 +11,7 @@ const display = Space_Grotesk({ subsets: ["latin"], variable: "--font-display", 
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: { default: "Hostavale: web hosting that is set up for you", template: "%s" },
+  title: { default: "Hostingpine: web hosting that is set up for you", template: "%s" },
   description: siteConfig.description,
   applicationName: siteConfig.name,
   keywords: ["web hosting", "shared hosting", "WordPress hosting", "VPS hosting", "cloud hosting", "managed hosting set-up"],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   manifest: "/site.webmanifest",
-  openGraph: { siteName: siteConfig.name, type: "website", locale: "en_US", images: [{ url: "/og.png", width: 1200, height: 630, alt: "Hostavale" }] },
+  openGraph: { siteName: siteConfig.name, type: "website", locale: "en_US", images: [{ url: "/og.png", width: 1200, height: 630, alt: "Hostingpine" }] },
   twitter: { card: "summary_large_image", images: ["/og.png"] },
 };
 

@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { Button } from "@/components/ui/button";
 
-export const metadata = { title: "Page not found | Hostavale", robots: { index: false, follow: false } };
+export const metadata = { title: "Page not found | Hostingpine", robots: { index: false, follow: false } };
 
 export default function NotFound() {
   return (

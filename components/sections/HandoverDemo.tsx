@@ -25,7 +25,7 @@ export function HandoverDemo() {
               <dt className="text-muted-foreground">DNS settings</dt><dd className="font-medium">Listed below, to enter at your registrar</dd>
             </dl>
             <p>Reply to this email if anything does not work and we will help you.</p>
-            <p className="text-muted-foreground">The Hostavale team</p>
+            <p className="text-muted-foreground">The Hostingpine team</p>
           </div>
         </div>
         <ol className="space-y-4 self-center">

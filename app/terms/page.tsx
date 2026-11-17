@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/metadata";
 import { offers, usd } from "@/lib/data";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata = buildMetadata("Terms of Service", "The agreement between you and Hostavale: the hosting plans, one-time payments, set-up and delivery, acceptable use, refunds, liability and governing law.", "/terms/");
+export const metadata = buildMetadata("Terms of Service", "The agreement between you and Hostingpine: the hosting plans, one-time payments, set-up and delivery, acceptable use, refunds, liability and governing law.", "/terms/");
 
 export default function TermsPage() {
   const E = siteConfig.legalEntity;

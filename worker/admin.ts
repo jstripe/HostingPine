@@ -2,7 +2,7 @@ import type { AdminKind } from "../lib/api-types";
 import { rateLimit } from "./lib/ratelimit";
 import { b64url, Ctx, DAY_MS, Env, HttpError, json, noContent, parseCookies, readJson, sha256Hex, timingSafeEqual, utf8 } from "./lib/util";
 
-const COOKIE = "hostavale_admin";
+const COOKIE = "hostingpine_admin";
 const SESSION_DAYS = 7;
 
 const cookie = (token: string, secure: boolean, maxAge = SESSION_DAYS * 86400) =>

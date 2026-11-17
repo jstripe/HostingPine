@@ -8,9 +8,9 @@ export function LogoMark({ className }: { className?: string }) {
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <Link href="/" className={cn("group inline-flex min-h-[44px] items-center gap-2.5 font-display text-xl font-bold tracking-tight", className)} aria-label="Hostavale home">
+    <Link href="/" className={cn("group inline-flex min-h-[44px] items-center gap-2.5 font-display text-xl font-bold tracking-tight", className)} aria-label="Hostingpine home">
       <LogoMark />
-      <span>Host<span className="text-primary">avale</span></span>
+      <span>Hosting<span className="text-primary">pine</span></span>
     </Link>
   );
 }

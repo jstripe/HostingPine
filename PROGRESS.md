@@ -1,6 +1,6 @@
 # PROGRESS
 
-- [x] Phase 0 brief (2026-11-16). Shape S, brand Hostavale (working), USD, 4 offers + custom.
+- [x] Phase 0 brief (2026-11-16). Shape S, brand Hostingpine (working), USD, 4 offers + custom.
 - [x] Phase 1 build
 - [x] Phase 2 copy/design
 - [x] Phase 3 footer
@@ -18,5 +18,5 @@
 - Overrides: Hosting page replaces Languages/Examples; no Careers/Security page; no mandatory sentence given, so 'what is not included' sentence used.
 
 ## STOP 1 answered 2026-11-16
-- Brand Hostavale, domain hostavale.com (dig NS returned nothing: not delegated yet), repo jstripe/Hostavale (created, private, EMPTY). Folder renamed to ~/hostavale. Old name search of repo and out/: clean.
+- Brand Hostingpine, domain hostingpine.com (dig NS returned nothing: not delegated yet), repo jstripe/Hostingpine (created, private, EMPTY). Folder renamed to ~/hostingpine. Old name search of repo and out/: clean.
 - Local commit 4d6ae03 made. Push to jstripe was BLOCKED by the permission classifier; deploy not attempted. Next: push, wrangler deploy, live audit, STOP 2.

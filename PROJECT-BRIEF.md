@@ -1,10 +1,10 @@
-# PROJECT BRIEF: Hostavale (working name)
+# PROJECT BRIEF: Hostingpine (working name)
 
 Source: user said "build a new website like https://hostingogo.com", following the Airwallex playbook. Nothing else was given, so everything below is "(Claude decides)". The reference site is only a category and layout reference: its numbers (50K customers, 99.9% uptime, 15 data centers, 24/7), its monthly billing and its 60-day guarantee are NOT copied (honest-copy rules).
 
 **Shape: S (service).** The customer buys a prepaid hosting term that our team sets up for them. No accounts or credits on this site: after payment they send their details on /thank-you/, the owner provisions the hosting by hand and emails the access details. Shape A was rejected because the site has no tool or control panel of its own.
 
-- Brand: Hostavale (working name, can change at STOP 1). Domain: pending (hostavale.com assumed in config). Folder ~/hostavale.
+- Brand: Hostingpine (working name, can change at STOP 1). Domain: pending (hostingpine.com assumed in config). Folder ~/hostingpine.
 - Pitch: Web hosting that is set up for you. Pick a plan, pay once for 12 months, we install it and email your login details.
 - Audience: small businesses, freelancers, agencies and shops that want a site online without handling servers.
 - Currency: USD (the reference site is USD). All offers are one-off, no renewal.

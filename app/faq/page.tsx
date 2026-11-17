@@ -8,7 +8,7 @@ import { faqs } from "@/lib/data";
 import { breadcrumbLd, faqLd } from "@/lib/seo";
 import { buildMetadata } from "@/lib/metadata";
 
-export const metadata = buildMetadata("Frequently asked questions", "What Hostavale sells, how long set-up takes, what is not included, refunds and data safety.", "/faq/");
+export const metadata = buildMetadata("Frequently asked questions", "What Hostingpine sells, how long set-up takes, what is not included, refunds and data safety.", "/faq/");
 
 export default function FaqPage() {
   return (

@@ -11,7 +11,7 @@ import { breadcrumbLd } from "@/lib/seo";
 import { buildMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata = buildMetadata("Hosting plans: what is included and what is not", "Shared, WordPress, VPS and cloud hosting plans from Hostavale: storage, resources, access and who each plan is for. We also say what is not included.", "/hosting/");
+export const metadata = buildMetadata("Hosting plans: what is included and what is not", "Shared, WordPress, VPS and cloud hosting plans from Hostingpine: storage, resources, access and who each plan is for. We also say what is not included.", "/hosting/");
 
 const notIncluded = [
   "Domain names. You need a domain that you already own.",

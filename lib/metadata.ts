@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "./site-config";
 
-/** Title is the page name; the brand is appended: "Pricing | Hostavale". */
+/** Title is the page name; the brand is appended: "Pricing | Hostingpine". */
 export function buildMetadata(title: string, description: string, path = "/", noindex = false): Metadata {
   const url = `${siteConfig.url}${path === "/" ? "/" : path.replace(/\/$/, "") + "/"}`;
   const fullTitle = path === "/" || title.includes(siteConfig.name) ? title : `${title} | ${siteConfig.name}`;
@@ -10,7 +10,7 @@ export function buildMetadata(title: string, description: string, path = "/", no
     description,
     alternates: { canonical: url },
     robots: noindex ? { index: false, follow: false } : undefined,
-    openGraph: { title: fullTitle, description, url, siteName: siteConfig.name, type: "website", images: [{ url: "/og.png", width: 1200, height: 630, alt: "Hostavale: web hosting that is set up for you" }] },
+    openGraph: { title: fullTitle, description, url, siteName: siteConfig.name, type: "website", images: [{ url: "/og.png", width: 1200, height: 630, alt: "Hostingpine: web hosting that is set up for you" }] },
     twitter: { card: "summary_large_image", title: fullTitle, description, images: ["/og.png"] },
   };
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "hostavale",
+  "name": "hostingpine",
   "main": "worker/index.ts",
   "compatibility_date": "2026-10-01",
   "assets": {
@@ -11,8 +11,8 @@
     "not_found_handling": "404-page"
   },
   // No database_id: wrangler creates the D1 database on the first deploy and finds it by name afterwards.
-  "d1_databases": [{ "binding": "DB", "database_name": "hostavale" }],
+  "d1_databases": [{ "binding": "DB", "database_name": "hostingpine" }],
   "triggers": { "crons": ["17 3 * * *"] },
-  "vars": { "SITE_URL": "https://hostavale.com" },
+  "vars": { "SITE_URL": "https://hostingpine.com" },
   "observability": { "enabled": true }
 }

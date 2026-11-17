@@ -8,7 +8,7 @@ import { breadcrumbLd } from "@/lib/seo";
 import { buildMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata = buildMetadata("Contact", "Write to Hostavale: contact form, email, phone, address and opening hours. We answer within 3 business days.", "/contact/");
+export const metadata = buildMetadata("Contact", "Write to Hostingpine: contact form, email, phone, address and opening hours. We answer within 3 business days.", "/contact/");
 
 export default function ContactPage() {
   const cards = [

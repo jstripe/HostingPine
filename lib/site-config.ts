@@ -1,16 +1,16 @@
 /**
  * Single source of truth. Company fields hold {{...}} values until the final step (STOP 2); every page reads them from here.
- * Domain: hostavale.com (working name, can change at STOP 1).
+ * Domain: hostingpine.com (working name, can change at STOP 1).
  */
-const domain = "hostavale.com";
+const domain = "hostingpine.com";
 
 export const siteConfig = {
-  name: "Hostavale",
+  name: "Hostingpine",
   domain,
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://hostavale.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://hostingpine.com",
   tagline: "Web hosting that is set up for you.",
   description:
-    "Hostavale sets up your web hosting for you: shared, WordPress, VPS or cloud hosting, paid once for 12 months. We install it and email your access details.",
+    "Hostingpine sets up your web hosting for you: shared, WordPress, VPS or cloud hosting, paid once for 12 months. We install it and email your access details.",
   launchMonth: "November 2026",
 
   // Company identity (final step fills these in)
@@ -36,10 +36,10 @@ export const siteConfig = {
   termMonths: 12,
 
   social: {
-    x: "https://x.com/hostavale",
-    instagram: "https://instagram.com/hostavale",
-    linkedin: "https://linkedin.com/company/hostavale",
-    facebook: "https://facebook.com/hostavale",
+    x: "https://x.com/hostingpine",
+    instagram: "https://instagram.com/hostingpine",
+    linkedin: "https://linkedin.com/company/hostingpine",
+    facebook: "https://facebook.com/hostingpine",
   } as Record<string, string>,
   /** Only networks that really exist are shown. Hidden until the owner confirms them. */
   socialLive: { x: false, instagram: false, linkedin: false, facebook: false } as Record<string, boolean>,
