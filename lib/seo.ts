@@ -15,7 +15,7 @@ export function organizationLd() {
     url,
     logo: `${url}/icon-512.png`,
     email: siteConfig.contactEmail,
-    identifier: siteConfig.registrationNumber,
+    taxID: siteConfig.ein,
     address: { "@type": "PostalAddress", streetAddress: siteConfig.address },
     contactPoint: [{ "@type": "ContactPoint", contactType: "customer support", email: siteConfig.contactEmail, availableLanguage: ["English"] }],
     ...(sameAs().length ? { sameAs: sameAs() } : {}),

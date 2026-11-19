@@ -36,7 +36,7 @@ export function LegalLayout({ title, intro, sections, path }: { title: string; i
         </div>
         <div className="mt-12 rounded-2xl border p-5 text-sm text-muted-foreground">
           <p className="font-display text-base font-semibold text-foreground">Contact</p>
-          <p className="mt-2">{siteConfig.legalEntity}, {siteConfig.address}. Registration no. {siteConfig.registrationNumber}.</p>
+          <p className="mt-2">{siteConfig.legalEntity}, {siteConfig.address}. EIN: {siteConfig.ein}.</p>
           <p className="mt-1">Email: <Mail /> or use the <Link className="text-primary underline underline-offset-4" href="/contact/">contact page</Link>. Phone: {siteConfig.phone}. Opening hours: {siteConfig.hours}.</p>
         </div>
       </div>

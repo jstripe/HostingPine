@@ -11,7 +11,7 @@ export default function LegalNoticePage() {
         <LP>{legalNotice()}</LP>
         <LUL>
           <li>Company name: {siteConfig.legalEntity}</li>
-          <li>Registration number: {siteConfig.registrationNumber}</li>
+          <li>EIN: {siteConfig.ein}</li>
           <li>Registered address: {siteConfig.address}</li>
           <li>Email: <Mail /></li>
           <li>Phone: {siteConfig.phone}</li>

@@ -8,7 +8,7 @@ export default function PrivacyPage() {
   const E = siteConfig.legalEntity;
   return (
     <LegalLayout path="/privacy/" title="Privacy Policy" intro="What personal data we collect, why, who else handles it and what rights you have under the GDPR." sections={[
-      { id: "controller", title: "Who is responsible for your data", body: <LP>The controller is {E}, registration no. {siteConfig.registrationNumber}, {siteConfig.address}. Contact for privacy questions: <Mail />.</LP> },
+      { id: "controller", title: "Who is responsible for your data", body: <LP>The controller is {E}, EIN: {siteConfig.ein}, {siteConfig.address}. Contact for privacy questions: <Mail />.</LP> },
       { id: "collect", title: "What we collect", body: <>
         <LP>We collect only what the service needs. We have no user accounts and we do not run analytics or advertising trackers.</LP>
         <LUL>

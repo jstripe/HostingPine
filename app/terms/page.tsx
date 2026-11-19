@@ -11,7 +11,7 @@ export default function TermsPage() {
   return (
     <LegalLayout path="/terms/" title="Terms of Service" intro={`The agreement between you and ${E} when you use ${siteConfig.name} or buy one of its hosting plans.`} sections={[
       { id: "who", title: "Who we are and who these terms apply to", body: <>
-        <LP>{siteConfig.name} is operated by {E}, registration no. {siteConfig.registrationNumber}, registered office: {siteConfig.address} (&ldquo;we&rdquo;, &ldquo;us&rdquo;). By buying a plan or sending us a form you agree to these Terms and to the <LLink href="/refund/">Refund Policy</LLink>.</LP>
+        <LP>{siteConfig.name} is operated by {E}, EIN: {siteConfig.ein}, registered office: {siteConfig.address} (&ldquo;we&rdquo;, &ldquo;us&rdquo;). By buying a plan or sending us a form you agree to these Terms and to the <LLink href="/refund/">Refund Policy</LLink>.</LP>
         <LP>You must be 18 or older and, if you buy for a business, have the authority to act for it.</LP>
       </> },
       { id: "service", title: "The service and the plans", body: <>

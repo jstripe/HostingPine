@@ -1,5 +1,5 @@
 /**
- * Single source of truth. Company fields hold {{...}} values until the final step (STOP 2); every page reads them from here.
+ * Single source of truth for company identity and shared site settings.
  * Domain: hostingpine.com (working name, can change at STOP 1).
  */
 const domain = "hostingpine.com";
@@ -13,17 +13,17 @@ export const siteConfig = {
     "Hostingpine sets up your web hosting for you: shared, WordPress, VPS or cloud hosting, paid once for 12 months. We install it and email your access details.",
   launchMonth: "November 2026",
 
-  // Company identity (final step fills these in)
-  legalEntity: "{{LEGAL NAME}}",
-  legalForm: "{{LEGAL FORM}}",
-  registrationNumber: "{{REGISTRATION NUMBER}}",
-  address: "{{ADDRESS}}",
+  // Company identity supplied by the owner.
+  legalEntity: "MEGAFLOW LLC",
+  legalForm: "a limited liability company registered in Wyoming, USA",
+  ein: "98-1935278",
+  address: "30 N Gould St Ste R, Sheridan, WY 82801",
   governingLaw: "{{GOVERNING LAW}}",
   /** The exact legal notice the owner gives at STOP 2. Empty = built from the fields above. */
   legalNoticeOverride: "",
 
-  contactEmail: `contact@${domain || "{{DOMAIN}}"}`,
-  phone: "{{PHONE}}",
+  contactEmail: "support@hostingpine.com",
+  phone: "+447907830500",
   hours: "Monday to Friday, 9:00 to 17:00 (time zone of our registered office)",
   hoursNote: "Messages sent outside these hours are answered on the next business day.",
 
@@ -65,5 +65,5 @@ export const mandatoryText = "Each plan is hosting that we set up for you for 12
 
 export function legalNotice(): string {
   if (siteConfig.legalNoticeOverride) return siteConfig.legalNoticeOverride;
-  return `${siteConfig.name} is operated by ${siteConfig.legalEntity}, registration no. ${siteConfig.registrationNumber}, registered office: ${siteConfig.address}.`;
+  return `${siteConfig.legalEntity}, ${siteConfig.legalForm} · Registered office: ${siteConfig.address} · EIN: ${siteConfig.ein}`;
 }

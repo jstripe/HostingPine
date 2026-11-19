@@ -27,7 +27,7 @@ export default function ContactPage() {
             {cards.map(({ Icon, t, d }) => (
               <div key={t} className="surface flex gap-4 p-5"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent text-primary"><Icon className="h-5 w-5" aria-hidden /></span><div><p className="font-semibold">{t}</p><p className="mt-0.5 text-sm text-muted-foreground">{d}</p></div></div>
             ))}
-            <p className="px-1 text-sm text-muted-foreground">{siteConfig.legalEntity}, registration no. {siteConfig.registrationNumber}.</p>
+            <p className="px-1 text-sm text-muted-foreground">{siteConfig.legalEntity}, EIN: {siteConfig.ein}.</p>
             <div className="overflow-hidden rounded-2xl border"><div className="aspect-[16/10]"><Media slug="contact-desk" alt="A support desk with a headset, a laptop and documents" sizes="(min-width: 1024px) 420px, 100vw" className="h-full w-full object-cover" /></div></div>
           </div>
         </div>

@@ -41,7 +41,7 @@ export default function AboutPage() {
           <h2 className="font-display text-3xl font-semibold">Company and contact</h2>
           <p className="mt-4 text-muted-foreground">{legalNotice()}</p>
           <dl className="mt-6 grid gap-4 sm:grid-cols-2">
-            <div className="surface p-5"><dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Company</dt><dd className="mt-1 font-medium">{siteConfig.legalEntity}</dd><dd className="text-sm text-muted-foreground">Registration no. {siteConfig.registrationNumber}</dd></div>
+            <div className="surface p-5"><dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Company</dt><dd className="mt-1 font-medium">{siteConfig.legalEntity}</dd><dd className="text-sm text-muted-foreground">EIN: {siteConfig.ein}</dd></div>
             <div className="surface p-5"><dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Address</dt><dd className="mt-1 font-medium">{siteConfig.address}</dd></div>
             <div className="surface p-5"><dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Email</dt><dd className="mt-1 font-medium"><a className="text-primary underline underline-offset-4" href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a></dd></div>
             <div className="surface p-5"><dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Phone</dt><dd className="mt-1 font-medium">{siteConfig.phone}</dd></div>

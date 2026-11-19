@@ -26,7 +26,7 @@ export function Footer() {
             </div>
             <dl className="mt-6 space-y-1 text-sm text-muted-foreground">
               <div><dt className="sr-only">Email</dt><dd><a href={`mailto:${siteConfig.contactEmail}`} className="underline-offset-4 hover:text-foreground hover:underline">{siteConfig.contactEmail}</a></dd></div>
-              <div><dt className="sr-only">Phone</dt><dd>{siteConfig.phone}</dd></div>
+              {!siteConfig.phone.startsWith("{{") && <div><dt className="sr-only">Phone</dt><dd>{siteConfig.phone}</dd></div>}
             </dl>
           </div>
           <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3">
@@ -52,7 +52,8 @@ export function Footer() {
           <div className="max-w-3xl space-y-1.5">
             <p>&copy; {new Date().getFullYear()} {siteConfig.legalEntity}. All rights reserved.</p>
             <p>{legalNotice()}</p>
-            <p>{siteConfig.name} is a product of {siteConfig.legalEntity}, {siteConfig.legalForm}. Registration no. {siteConfig.registrationNumber}. Registered office: {siteConfig.address}. Email: {siteConfig.contactEmail}. Phone: {siteConfig.phone}.</p>
+            <p>{siteConfig.name} is a product of {siteConfig.legalEntity}.</p>
+            <p>Contact: <a href={`mailto:${siteConfig.contactEmail}`} className="underline underline-offset-4 hover:text-foreground">{siteConfig.contactEmail}</a></p>
             <p>Photos by Pexels contributors.</p>
           </div>
         </div>
