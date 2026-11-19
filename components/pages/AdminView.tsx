@@ -53,7 +53,7 @@ export function AdminView() {
     <div className="mx-auto max-w-6xl px-5 py-8 sm:px-6">
       <div className="flex items-center justify-between"><Logo /><Button variant="outline" size="sm" onClick={async () => { await api.adminLogout(); setData(null); setView("out"); }}>Log out</Button></div>
       <h1 className="mt-8 text-3xl font-semibold">Back office</h1>
-      <p className="mt-1 text-sm text-muted-foreground">Check each payment reference in the Airwallex dashboard before you start the work.</p>
+      <p className="mt-1 text-sm text-muted-foreground">Check each payment reference in the Stripe dashboard before you start the work.</p>
 
       <h2 className="mt-8 text-xl font-semibold">Details sent after payment ({data.intakes.filter((i) => !i.handledAt).length} open)</h2>
       <ul className="surface mt-3 divide-y p-0 text-sm">

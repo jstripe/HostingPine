@@ -15,7 +15,7 @@ export default function PrivacyPage() {
           <li><strong>Contact form:</strong> your name, email, the subject and your message.</li>
           <li><strong>Details form after payment:</strong> business name, contact name, email, phone number, the domain name you want to host, the plan you bought, your payment reference and optional notes.</li>
           <li><strong>Quote form:</strong> business name, contact name, email, number of websites, what you need and your message.</li>
-          <li><strong>Payment:</strong> card payments are handled by Airwallex. We receive the confirmation and the payment reference. We never see or store your card number.</li>
+          <li><strong>Payment:</strong> card payments are handled by Stripe. We receive the confirmation and the payment reference. We never see or store your card number.</li>
           <li><strong>Technical data:</strong> like any website, our hosting provider processes your IP address and request data to deliver pages, stop abuse and keep the site secure. We also use your IP address, in hashed form, to limit how many times a form can be sent.</li>
           <li><strong>Hosting account details:</strong> to set up your hosting we create an account for your domain with our hosting provider and use your contact email for it. Your website files and data are stored on that hosting by you, not by this website.</li>
         </LUL>
@@ -36,11 +36,11 @@ export default function PrivacyPage() {
         ["Contact messages", "12 months, then deleted automatically"],
         ["Quote requests", "12 months, then deleted automatically"],
         ["Details sent after payment", "3 years, to deliver the work, handle disputes and meet accounting duties, then deleted automatically"],
-        ["Payment records held by Airwallex and our accounts", "As long as the law requires accounting records to be kept"],
+        ["Payment records held by Stripe and our accounts", "As long as the law requires accounting records to be kept"],
         ["Rate-limit records", "Under 24 hours"],
         ["Admin session (staff only)", "7 days"],
       ]} /> },
-      { id: "transfers", title: "International transfers", body: <LP>Cloudflare, Airwallex and our hosting provider may process data outside the European Economic Area. Where they do, the transfer is protected by the safeguards in the table above, such as the EU-US Data Privacy Framework or Standard Contractual Clauses.</LP> },
+      { id: "transfers", title: "International transfers", body: <LP>Cloudflare, Stripe and our hosting provider may process data outside the European Economic Area. Where they do, the transfer is protected by the safeguards in the table above, such as the EU-US Data Privacy Framework or Standard Contractual Clauses.</LP> },
       { id: "rights", title: "Your rights", body: <>
         <LP>You have the right to access your data, correct it, delete it, restrict or object to its use, receive it in a portable format, and withdraw consent where we rely on it. To use a right, write to <Mail /> or use the <LLink href="/contact/">contact page</LLink> and choose &ldquo;Privacy request&rdquo;. We answer within one month.</LP>
         <LP>You may also complain to the data protection supervisory authority of the country where you live or work, or where {E} is established.</LP>

@@ -105,9 +105,14 @@ export function QuoteForm() {
 
 export function IntakeForm() {
   const [offer, setOffer] = React.useState("");
+  const [paymentRef, setPaymentRef] = React.useState("");
   React.useEffect(() => {
-    const o = new URLSearchParams(window.location.search).get("offer") || "";
+    const params = new URLSearchParams(window.location.search);
+    const o = params.get("offer") || "";
     if (offerOptions.some((x) => x.id === o)) setOffer(o);
+    // Stripe adds the Checkout Session id to the redirect when the link ends with session_id={CHECKOUT_SESSION_ID}.
+    const sid = params.get("session_id") || "";
+    if (/^cs_[A-Za-z0-9_]+$/.test(sid)) setPaymentRef(sid);
   }, []);
   const f = useForm((fd) => api.intake({ business: v(fd, "business"), contactName: v(fd, "contactName"), email: v(fd, "email"), phone: v(fd, "phone"), domainName: v(fd, "domainName"), offer, paymentRef: v(fd, "paymentRef"), notes: v(fd, "notes"), website: v(fd, "website") }));
   if (f.status === "success") return <Success title="Details received" text={`Thank you. We start the set-up within ${siteConfig.startWithinDays} business days of receiving your complete details and we email your access details to you. If something is missing, we will ask.`} />;
@@ -128,7 +133,7 @@ export function IntakeForm() {
         <Field id="i-offer" label="Offer purchased">
           <select id="i-offer" value={offer} onChange={(e) => setOffer(e.target.value)} required className={selectCls}><option value="" disabled>Choose the offer you bought</option>{offerOptions.map((o) => <option key={o.id} value={o.id}>{o.name}</option>)}</select>
         </Field>
-        <Field id="i-ref" label="Payment reference" hint="Shown on your Airwallex payment confirmation and receipt."><Input id="i-ref" name="paymentRef" required maxLength={120} autoComplete="off" /></Field>
+        <Field id="i-ref" label="Payment reference" hint="Shown on your Stripe receipt email (receipt number) or payment confirmation."><Input id="i-ref" name="paymentRef" required maxLength={120} autoComplete="off" value={paymentRef} onChange={(e) => setPaymentRef(e.target.value)} /></Field>
       </div>
       <Field id="i-notes" label="Anything we should know? (optional)" hint="For example the software you want installed, or the host your site is on today."><Textarea id="i-notes" name="notes" rows={4} maxLength={2000} /></Field>
       <Honeypot />

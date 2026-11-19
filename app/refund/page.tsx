@@ -18,7 +18,7 @@ export default function RefundPage() {
       { id: "after", title: "After the first 14 days", body: <LP>If the hosting works as described, there is no refund after the first {W} days. Because there is no automatic renewal, nothing is charged again and there is nothing to cancel.</LP> },
       { id: "how", title: "How to request a refund", body: <>
         <LP>Write to <Mail /> or use the <LLink href="/contact/">contact page</LLink> and choose &ldquo;Refund request&rdquo;. Please include the email you used and your payment reference.</LP>
-        <LP>We answer within {siteConfig.refundDecisionDays} business days. Approved refunds are processed within {siteConfig.refundPayDays} business days, to the card used for the payment, through Airwallex. Your bank may need extra time to show it on your statement.</LP>
+        <LP>We answer within {siteConfig.refundDecisionDays} business days. Approved refunds are processed within {siteConfig.refundPayDays} business days, to the card used for the payment, through Stripe. Your bank may need extra time to show it on your statement.</LP>
       </> },
       { id: "billing", title: "Billing errors and unauthorized charges", body: <LP>If you were charged the wrong amount, charged twice, or you did not authorize a payment, write to us straight away. We correct billing errors and refund amounts charged by mistake in full.</LP> },
       { id: "not", title: "What a refund does not cover", body: <LP>Domain names that you bought from another company are not ours to refund. If we end a plan because you broke the acceptable use rules in the <LLink href="/terms/">Terms</LLink>, there is no refund after the first {W} days.</LP> },

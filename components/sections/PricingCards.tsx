@@ -37,7 +37,7 @@ function PayCard({ o }: { o: Offer }) {
             <button type="button" className={cn(btn, "opacity-60 hover:translate-y-0")} aria-disabled="true" onClick={() => setWarn(true)}><Lock className="h-4 w-4" aria-hidden />Pay now</button>
           )}
         </div>
-        <p className="mt-3 text-center text-xs text-muted-foreground">Secure card payment via Airwallex. One-off payment.</p>
+        <p className="mt-3 text-center text-xs text-muted-foreground">Secure card payment via Stripe. One-off payment.</p>
       </div>
     </div>
   );
@@ -69,7 +69,7 @@ export function PricingCards() {
         <CustomCard />
       </div>
       <p className="mx-auto mt-8 max-w-3xl text-center text-sm text-muted-foreground">
-        Pay once. No automatic renewal. Prices in USD. Taxes may apply. Set-up time counts from when we receive your complete details. All plans are one-time payments processed securely by Airwallex. See our <Link href="/terms/" className="text-primary underline underline-offset-4">Terms</Link> and <Link href="/refund/" className="text-primary underline underline-offset-4">Refund Policy</Link>.
+        Pay once. No automatic renewal. Prices in USD. Taxes may apply. Set-up time counts from when we receive your complete details. All plans are one-time payments processed securely by Stripe. See our <Link href="/terms/" className="text-primary underline underline-offset-4">Terms</Link> and <Link href="/refund/" className="text-primary underline underline-offset-4">Refund Policy</Link>.
       </p>
     </div>
   );

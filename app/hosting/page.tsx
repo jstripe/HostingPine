@@ -57,7 +57,7 @@ export default function HostingPage() {
           <h2 className="font-display text-3xl font-semibold">How the hand-over works</h2>
           <ol className="mt-6 list-decimal space-y-3 pl-6 text-lg leading-8 text-muted-foreground marker:font-semibold marker:text-primary">
             <li>You pay on the pricing page and land on a short form.</li>
-            <li>You send your domain, contact details and the payment reference from your Airwallex receipt.</li>
+            <li>You send your domain, contact details and the payment reference from your Stripe receipt.</li>
             <li>We check the payment, then set up your hosting within {siteConfig.startWithinDays} business days of receiving complete details (Monday to Friday).</li>
             <li>We email your access details and the start and end dates of your {siteConfig.termMonths} months. You point your domain to the hosting using the settings we give you.</li>
           </ol>

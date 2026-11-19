@@ -3,7 +3,7 @@ import { rateLimit } from "./lib/ratelimit";
 import { Ctx, json, readJson } from "./lib/util";
 import { domain, email as vEmail, longText, oneOf, phone, str, text } from "./lib/validate";
 
-/** Details a customer sends on /thank-you/ after paying. Stored for /admin; payment is checked by hand in the Airwallex dashboard. */
+/** Details a customer sends on /thank-you/ after paying. Stored for /admin; payment is checked by hand in the Stripe dashboard. */
 export async function intake(c: Ctx): Promise<Response> {
   const b = await readJson<Partial<IntakeRequest>>(c.request, 16 * 1024);
   if (str(b.website)) return json({ ok: true });

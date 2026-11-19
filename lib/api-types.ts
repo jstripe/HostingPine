@@ -5,7 +5,7 @@
 
 export type OfferId = "shared" | "wordpress" | "vps" | "cloud";
 
-/** Fixed offers sold through one-time Airwallex Payment Links. amountCents must equal the amount on the link (USD). */
+/** Fixed offers sold through one-time Stripe Payment Links. amountCents must equal the amount on the link (USD). */
 export const OFFER_CATALOG: Record<OfferId, { name: string; amountCents: number }> = {
   shared: { name: "Shared Hosting", amountCents: 7900 },
   wordpress: { name: "WordPress Hosting", amountCents: 11900 },

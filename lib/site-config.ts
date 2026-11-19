@@ -18,7 +18,7 @@ export const siteConfig = {
   legalForm: "a limited liability company registered in Wyoming, USA",
   ein: "98-1935278",
   address: "30 N Gould St Ste R, Sheridan, WY 82801",
-  governingLaw: "{{GOVERNING LAW}}",
+  governingLaw: "the laws of the State of Wyoming, United States",
   /** The exact legal notice the owner gives at STOP 2. Empty = built from the fields above. */
   legalNoticeOverride: "",
 
@@ -44,7 +44,7 @@ export const siteConfig = {
   /** Only networks that really exist are shown. Hidden until the owner confirms them. */
   socialLive: { x: false, instagram: false, linkedin: false, facebook: false } as Record<string, boolean>,
 
-  /** One-time Airwallex payment links, one per offer. Env vars override. Empty = disabled "Checkout opens soon" button. */
+  /** One-time Stripe Payment Links, one per offer. Env vars override. Empty = disabled "Checkout opens soon" button. */
   payLinks: {
     shared: process.env.NEXT_PUBLIC_PAY_SHARED || "",
     wordpress: process.env.NEXT_PUBLIC_PAY_WORDPRESS || "",
@@ -55,7 +55,7 @@ export const siteConfig = {
   /** Only what the site really uses. The hosting provider that runs the servers is added by the owner at STOP 2. */
   subProcessors: [
     { name: "Cloudflare, Inc.", purpose: "Hosting, content delivery, security and the database that stores the forms you send us", location: "United States and worldwide edge network", safeguard: "EU-US Data Privacy Framework and Standard Contractual Clauses" },
-    { name: "Airwallex (UK) Limited and affiliates", purpose: "Card payment processing for the plans you buy", location: "United Kingdom, EEA, Hong Kong and Singapore", safeguard: "UK adequacy decisions and Standard Contractual Clauses" },
+    { name: "Stripe, Inc. and Stripe Payments Europe, Ltd", purpose: "Card payment processing for the plans you buy", location: "United States and EEA", safeguard: "EU-US Data Privacy Framework and Standard Contractual Clauses" },
     { name: "{{HOSTING PROVIDER}}", purpose: "The company whose servers run the hosting you buy; it receives your domain name and contact email so that the hosting account can be created", location: "{{PROVIDER LOCATION}}", safeguard: "{{PROVIDER SAFEGUARD}}" },
   ],
 };

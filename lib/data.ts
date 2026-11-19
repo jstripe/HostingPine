@@ -63,7 +63,7 @@ export const benefits = [
 
 export const steps = [
   { title: "Choose a plan", text: "Pick the hosting plan that fits your site on the pricing page." },
-  { title: "Pay securely", text: "Pay by card through Airwallex. One-off payment, nothing renews." },
+  { title: "Pay securely", text: "Pay by card through Stripe. One-off payment, nothing renews." },
   { title: "Send your details", text: "After paying you land on a short form: your domain, contact details and your payment reference." },
   { title: `We set it up in ${siteConfig.startWithinDays} business days`, text: "We install your hosting and email you the access details. If something is missing, we ask." },
 ] as const;
@@ -84,7 +84,7 @@ export const faqs = [
   { q: "Do you guarantee uptime?", a: "We do not publish an uptime percentage or a service level guarantee. If the service you bought does not work as described, you can ask for a refund under the Refund Policy." },
   { q: "Can I get a refund?", a: `Yes. You can ask for a full refund within ${siteConfig.refundWindowDays} days of payment, as set out in the Refund Policy. We answer within ${siteConfig.refundDecisionDays} business days and pay approved refunds within ${siteConfig.refundPayDays} business days.` },
   { q: "Can you move my existing website?", a: "For migrations, request a quote. We look at your site, tell you what we would do and give you a price before you pay anything." },
-  { q: "Is my data safe?", a: "We collect only what we need to set up your hosting: the details you send us. This website runs on Cloudflare and card payments are handled by Airwallex, so we never see or store your card number. Read the Privacy Policy for what we keep and for how long." },
+  { q: "Is my data safe?", a: "We collect only what we need to set up your hosting: the details you send us. This website runs on Cloudflare and card payments are handled by Stripe, so we never see or store your card number. Read the Privacy Policy for what we keep and for how long." },
 ] as const;
 
 export const navLinks = [
@@ -110,7 +110,7 @@ export const billingFaqs = [
   { q: "Does anything renew automatically?", a: "No. Every plan is a one-off payment for 12 months of hosting. Nothing renews automatically and there is nothing to cancel." },
   { q: "Can I buy more than one plan?", a: "Yes. Each purchase is separate and has its own set-up. For many websites, request a quote." },
   { q: "When do the 12 months start?", a: "The 12 months start on the day we hand over your access details, not on the day you pay. We write the start and end dates in the email." },
-  { q: "Which payment methods can I use?", a: "You pay by card on a secure Airwallex page. Airwallex shows the card options available for your payment." },
+  { q: "Which payment methods can I use?", a: "You pay by card on a secure Stripe page. Stripe shows the card options available for your payment." },
   { q: "Can I get a refund?", a: `Yes. You can ask within ${siteConfig.refundWindowDays} days of payment, as set out in the Refund Policy.` },
   { q: "Are prices final?", a: "Prices are in USD. Taxes may apply depending on where you are, and are shown on the payment page if they do." },
 ] as const;

@@ -16,9 +16,9 @@ CLOUDFLARE_ACCOUNT_ID=afa4f082a470ce277cf6774c8660cafc npx wrangler secret put A
 ```
 Use a long random password. /admin/ lists the details customers send after paying, quote requests and contact messages.
 
-## Airwallex Payment Links
+## Stripe Payment Links
 One link per fixed offer, one-time, USD, product named exactly like the offer, amount equal to lib/api-types.ts OFFER_CATALOG.
-After payment redirect (if Airwallex lets you set it): https://<domain>/thank-you/?offer=<shared|wordpress|vps|cloud>
+After payment redirect (Stripe Payment Link: After payment → Don't show confirmation page → Redirect): https://hostingpine.com/thank-you/?offer=<shared|wordpress|vps|cloud>&session_id={CHECKOUT_SESSION_ID}
 Put the URLs in lib/site-config.ts payLinks (or NEXT_PUBLIC_PAY_* env vars at build time).
 
 ## Domain and email

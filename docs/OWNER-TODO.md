@@ -14,10 +14,10 @@ Change `lib/data.ts` and the Terms if a spec differs. Then fill the supplier lin
 - Backups: shared and WordPress daily backups must really run at the supplier.
 
 ## Payment matching (by hand)
-Airwallex sends nothing back. For each form in /admin: compare the payment reference and email with the Airwallex dashboard, then set up the hosting and mark the item handled. Set the redirect URL on each Airwallex link to https://<domain>/thank-you/?offer=<shared|wordpress|vps|cloud>.
+Payment Links send nothing back to the site. For each form in /admin: compare the payment reference and email with the Stripe dashboard, then set up the hosting and mark the item handled. Set the redirect URL on each Stripe link to https://<domain>/thank-you/?offer=<shared|wordpress|vps|cloud>.
 
 ## Data retention that the daily cron enforces
 Contact messages 12 months, quotes 12 months, post-payment details 3 years. The cron trigger count on the Stripe Cloudflare account is limited (5 on the free plan): if deploy fails with a cron error, free one first.
 
 ## By hand
-Worker secrets ADMIN_USERNAME and ADMIN_PASSWORD, domain on the Stripe Cloudflare account, Email Routing contact@<domain>, company details and Airwallex links at STOP 2, Companies House status of the entity.
+Worker secrets ADMIN_USERNAME and ADMIN_PASSWORD, domain on the Stripe Cloudflare account, Email Routing contact@<domain>, company details and Stripe links at STOP 2, Companies House status of the entity.
