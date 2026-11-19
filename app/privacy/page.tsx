@@ -40,7 +40,7 @@ export default function PrivacyPage() {
         ["Rate-limit records", "Under 24 hours"],
         ["Admin session (staff only)", "7 days"],
       ]} /> },
-      { id: "transfers", title: "International transfers", body: <LP>Cloudflare, Stripe and our hosting provider may process data outside the European Economic Area. Where they do, the transfer is protected by the safeguards in the table above, such as the EU-US Data Privacy Framework or Standard Contractual Clauses.</LP> },
+      { id: "transfers", title: "International transfers", body: <LP>Cloudflare and Stripe may process data outside the European Economic Area. Hetzner, the provider whose servers run the hosting you buy, keeps that data in Germany and Finland, inside the EU/EEA. Where they do, the transfer is protected by the safeguards in the table above, such as the EU-US Data Privacy Framework or Standard Contractual Clauses.</LP> },
       { id: "rights", title: "Your rights", body: <>
         <LP>You have the right to access your data, correct it, delete it, restrict or object to its use, receive it in a portable format, and withdraw consent where we rely on it. To use a right, write to <Mail /> or use the <LLink href="/contact/">contact page</LLink> and choose &ldquo;Privacy request&rdquo;. We answer within one month.</LP>
         <LP>You may also complain to the data protection supervisory authority of the country where you live or work, or where {E} is established.</LP>

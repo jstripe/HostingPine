@@ -56,7 +56,7 @@ export const siteConfig = {
   subProcessors: [
     { name: "Cloudflare, Inc.", purpose: "Hosting, content delivery, security and the database that stores the forms you send us", location: "United States and worldwide edge network", safeguard: "EU-US Data Privacy Framework and Standard Contractual Clauses" },
     { name: "Stripe, Inc. and Stripe Payments Europe, Ltd", purpose: "Card payment processing for the plans you buy", location: "United States and EEA", safeguard: "EU-US Data Privacy Framework and Standard Contractual Clauses" },
-    { name: "{{HOSTING PROVIDER}}", purpose: "The company whose servers run the hosting you buy; it receives your domain name and contact email so that the hosting account can be created", location: "{{PROVIDER LOCATION}}", safeguard: "{{PROVIDER SAFEGUARD}}" },
+    { name: "Hetzner Online GmbH", purpose: "The company whose servers run the hosting you buy; it receives your domain name and contact email so that the hosting account can be created", location: "Germany and Finland (EU/EEA)", safeguard: "No international transfer: data remains within the EU/EEA" },
   ],
 };
 
